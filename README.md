@@ -76,17 +76,17 @@ Using the provided exercise dataset, the following data operations and extractio
 
 ### 1. Security Artifact & IoC Extraction
 To safely parse potential malicious infrastructure from the unstructured sample file, specific regex-based **Extractors** were executed in the recipe:
-![[File_chef.png]]
+![](File_chef.png)
 
 *   **Target Email Address:** Solved using the `Extract email addresses` operation.
     *   **Identified IoC:** `hidden@hotmail.com`
-    ![[Pasted image 20260716191242.png]]
+    ![](Pasted%20image%2020260716191242.png)
 *   **Target IP Infrastructure:** Solved using the `Extract IP addresses` operation to parse valid IPv4 scopes.
     *   **Identified IoC:** `102.20.11.232` (Specifically isolated as the active host ending in `.232`).
-    ![[Pasted image 20260716191346.png]]
+    ![](Pasted%20image%2020260716191346.png)
 *   **Target Domain Discovery:** Solved using the `Extract domains` operation to strip protocols and isolate root domains.
     *   **Identified IoC:** `TryHackMe.com` (Isolated as the specific platform domain beginning with the character `"T"`).
-    ![[Pasted image 20260716191605.png]]
+    ![](Pasted%20image%2020260716191605.png)
 
 ---
 
@@ -102,7 +102,7 @@ During the encoding breakdown, the decimal value **78** (representing the ASCII 
 To transmit special characters safely across web protocols without breaking application parsers, URL encoding replaces reserved characters with a `%` followed by their hex representation (UTF-8).
 *   **Raw Resource Locator:** `https://tryhackme.com/r/careers`
 *   **Percent-Encoded Output:** `https%3A%2F%2Ftryhackme.com%2Fr%2Fcareers`
-![[Pasted image 20260716213314.png]]
+![](Pasted%20image%2020260716213314.png)
 
 ---
 
@@ -120,7 +120,7 @@ The following operations were successfully executed to analyze and normalize tar
 Using the structured dataset provided in the previous analysis phase, advanced data extraction was applied to filter network endpoints based on strict octet patterns:
 *   **Target Scope:** Identifying active IPv4 addresses starting and ending with the octet `10`.
 *   **Isolated Infrastructure IP:** `10.10.2.10`
-![[Pasted image 20260716214515.png]]
+![](Pasted%20image%2020260716214515.png)
 
 ### 2. Base Encoding Schemes (Base64 & Base85)
 Malware developers and obfuscation tools frequently transition payloads across various base encodings to bypass network-layer signatures (such as basic IDS/IPS rules).
@@ -129,25 +129,25 @@ Malware developers and obfuscation tools frequently transition payloads across v
 The raw string `"Nice Room!"` was converted into its standard text representation using the `To Base64` operation:
 *   **Raw String:** `Nice Room!`
 *   **Encoded Output:** `TmljZSBST29tIQ==`
-![[Pasted image 20260716214645.png]]
+![](Pasted%20image%2020260716214645.png)
 
 #### B. Base85 Payload Extraction
 The ASCII representation `<+oue+DGm>Ap%u7` was processed through the `From Base85` operation to reconstruct the underlying string:
 *   **Obfuscated String:** `<+oue+DGm>Ap%u7`
 *   **Decoded Output:** `This is fun!`
-![[Pasted image 20260716215310.png]]
+![](Pasted%20image%2020260716215310.png)
 
 ### 3. URL De-obfuscation (Percent Decoding)
 Web application attacks, such as Local File Inclusion (LFI) or Cross-Site Scripting (XSS), often mask critical parameters through URL encoding. CyberChef's `URL Decode` was applied to reconstruct a safe, human-readable path:
 *   **Obfuscated Input:** `https%3A%2F%2Ftryhackme%2Fcom%2Fr%2Froom%2Fcyberchefbasics`
 *   **Decoded Target Resource:** `https://tryhackme.com/r/room/cyberchefbasics`
-![[Pasted image 20260716214802.png]]
+![](Pasted%20image%2020260716214802.png)
 
 ### 4. Forensic Chronology (UNIX Epoch Conversion)
 Timestamps recovered from system logs or database dumps are routinely stored as UNIX epoch values (the total elapsed seconds since January 1, 1970). Translating this metadata is critical for establishing an accurate timeline of events:
 *   **Epoch Timestamp:** `1725151258`
 *   **UTC Datetime Normalization:** `Sun 1 September 2024 00:40:58 UTC`
-![[Pasted image 20260716215650.png|696]]
+![](Pasted%20image%2020260716215650.png|696)
 
 ---
 

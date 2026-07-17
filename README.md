@@ -9,7 +9,7 @@ environment: TryHackMe - CyberChef Room
 ---
 # CyberChef: The Basics - Writeup & Analysis
 
-> [!INFO]
+> [!NOTE]
 > **Project Overview**
 > ### This project documents my practical application of **CyberChef** (the "Cyber Swiss Army Knife") to analyze, decode, and extract malicious artifacts. Throughout this room, I demonstrate fundamental skills required in Security Operations Center (SOC) environments, Digital Forensics, and Incident Response (DFIR) workflows.
 

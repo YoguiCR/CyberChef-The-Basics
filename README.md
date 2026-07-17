@@ -162,6 +162,8 @@ Throughout this investigation and training module, CyberChef has proven to be an
 *   **Operational Constraints & Tool Limitations:** While highly effective for localized file analysis and rapid payload decoding, CyberChef is not designed for heavy, large-scale enterprise log ingestion or big data parsing. For massive datasets, integrating dedicated command-line utilities (such as Python parsing libraries, `grep`, `awk`, or SIEM queries) remains essential to support the operational pipeline.
 ## 🛡️ Purple Team & Incident Response Value
 
-> [!TIP] **Real-World Application**
+> [!TIP]
+> ### 🛡️ Real-World Application (Purple Team & IR)
+> 
 > 1. **Malware Analysis (De-obfuscation):** Threat actors frequently encode malicious PowerShell or Bash payloads in Base64 to bypass basic security controls. Chaining `From Base64` and `Remove Null Bytes` allows an analyst to quickly inspect the payload's intent.
 > 2. **Efficient Threat Intelligence:** During an active incident, converting raw network logs or memory dumps into structured intelligence (like extracting IPs, domains, and URLs) is critical for blocking attack vectors at the perimeter.

@@ -7,22 +7,6 @@ status: Completed
 classification: Public / Portfolio
 environment: TryHackMe - CyberChef Room
 ---
----
-title: CyberChef - The Basics
-date: 2026-07-15
-author: Lindon Mitchell (YoguiCR)
-role: Cyber Threat Analyst / DFIR
-status: In Progress
-classification: Public / Portfolio
-environment: TryHackMe - CyberChef Room
-tags:
-  - writeup
-  - tryhackme
-  - dfir
-  - purple-team
-  - tools
----
-
 # CyberChef: The Basics - Writeup & Analysis
 
 > [!INFO] **Project Overview**

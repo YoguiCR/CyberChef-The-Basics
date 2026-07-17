@@ -9,7 +9,8 @@ environment: TryHackMe - CyberChef Room
 ---
 # CyberChef: The Basics - Writeup & Analysis
 
-> [!INFO] **Project Overview**
+> [!INFO]
+> **Project Overview**
 > ### This project documents my practical application of **CyberChef** (the "Cyber Swiss Army Knife") to analyze, decode, and extract malicious artifacts. Throughout this room, I demonstrate fundamental skills required in Security Operations Center (SOC) environments, Digital Forensics, and Incident Response (DFIR) workflows.
 
 ---
@@ -67,7 +68,8 @@ Before performing any technical operations on raw, obfuscated data, a security a
 ### Objective
 Perform hands-on data parsing and Indicator of Compromise (IoC) extraction from raw, unformatted text files.
 
-> [!NOTE] **Methodology**
+> [!NOTE]
+> **Methodology**
 > Rather than manually searching the file, I loaded the raw text into the **Input** pane and leveraged CyberChef’s extraction operations to automate the discovery of key indicators.
 
 ##### **Hands-on Analysis & Indicator Extraction**

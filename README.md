@@ -45,7 +45,7 @@ Based on the analysis of the user interface, CyberChef operates through four dis
 4. **Output (4):** The display pane showing the final processed results, featuring options to save output as a file, copy to clipboard, or replace the input.
 
 ### Key UI Functionalities for Analysts
-* **Save/Load Recipe:** Crucial for standardizing analysis workflows. This allows SOC and IR teams to share successful de-codificación configurations.
+* **Save/Load Recipe:** Crucial for standardizing analysis workflows. This allows SOC and IR teams to share successful decoding configurations.
 * **Replace Input with Output:** Extremely useful during iterative multi-stage decoding processes, preventing manual copy-paste errors.
 * **Auto Bake:** Instantly renders the output as the recipe changes, accelerating the trial-and-error phase during obfuscation reversing.
 
